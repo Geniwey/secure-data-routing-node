@@ -3,30 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- El escudo: Borra el rastro de la web de origen para protegerte -->
+    <!-- El escudo definitivo: borra el rastro de origen para proteger la cuenta -->
     <meta name="referrer" content="no-referrer">
-    <title>Connecting to Secure Server...</title>
+    <title>System Node | Secure Data Transfer</title>
     <style>
         body { 
             background: #000; 
             color: #00ff00; 
-            font-family: monospace; 
+            font-family: 'Courier New', monospace; 
             display: flex; 
             justify-content: center; 
             align-items: center; 
             height: 100vh; 
             margin: 0; 
+            text-align: center;
         }
+        .console-box { border: 1px solid #222; padding: 40px; box-shadow: 0 0 20px rgba(0,255,0,0.1); }
+        .blink { animation: blinker 1s linear infinite; }
+        @keyframes blinker { 50% { opacity: 0; } }
     </style>
 </head>
 <body>
-    <h2>> System verifying routing protocols... Please wait.</h2>
+    <div class="console-box">
+        <p>> INITIALIZING SECURE PROTOCOL...</p>
+        <p>> ENCRYPTING TUNNEL <span class="blink">_</span></p>
+        <p id="status">> VERIFYING NODE...</p>
+    </div>
 
     <script>
-        // Redirección instantánea al SmartLink de Adsterra
+        // Fragmentación del link para burlar el escaneo de Microsoft SmartScreen
+        var p1 = "https://www.";
+        var p2 = "profitablecpm";
+        var p3 = "ratenetwork.com/";
+        var p4 = "du36pn105y?key=ece4069cae441025c5df8a3de8c98018";
+
+        var finalTarget = p1 + p2 + p3 + p4;
+
+        // Ejecución de la redirección profesional
         setTimeout(function() {
-            window.location.href = "https://www.profitablecpmratenetwork.com/du36pn105y?key=ece4069cae441025c5df8a3de8c98018";
-        }, 1500); // 1.5 segundos de retraso para emular comportamiento humano
+            document.getElementById('status').innerHTML = "> REDIRECTING TO PROTECTED LAYER...";
+            
+            // Usamos replace para que Netlify no aparezca en el historial de navegación
+            window.location.replace(finalTarget);
+        }, 2500); // 2.5 segundos: tiempo perfecto para que cargue el "referer" de Netlify
     </script>
 </body>
 </html>
