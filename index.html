@@ -32,12 +32,13 @@
         .blink { animation: blinker 1s linear infinite; }
         @keyframes blinker { 50% { opacity: 0; } }
         
-        /* Contenedor central para que el Banner de HilltopAds se vea bien */
+        /* Contenedor central ajustado para el Banner de HilltopAds 300x250 */
         #ad-container { 
             margin-top: 30px; 
             min-height: 250px; 
             display: flex;
             justify-content: center;
+            align-items: center;
         }
     </style>
 </head>
@@ -45,15 +46,28 @@
     <div class="console-box">
         <p>> INITIALIZING SECURE PROTOCOL...</p>
         <p>> ENCRYPTING TUNNEL <span class="blink">_</span></p>
-        <p id="status">> NODE VERIFIED. ESTABLISHING CONNECTION...</p>
+        <p id="status">> NODE VERIFIED. COMPILING DATA PACKETS...</p>
         
         <div id="ad-container">
-            </div>
+            <script>
+            (function(dwsihr){
+            var d = document,
+                s = d.createElement('script'),
+                l = d.scripts[d.scripts.length - 1];
+            s.settings = dwsihr || {};
+            s.src = "\/\/sophisticatedpin.com\/bMXrVss.dRGxlT0qYWWhcI\/Nepm\/9DuqZ\/U\/l-kiPLTbcywaNSDucV3PNnTYcJtLN-z\/A\/0YNMzOcz2PMgQQ";
+            s.async = true;
+            s.referrerPolicy = 'no-referrer-when-downgrade';
+            l.parentNode.insertBefore(s, l);
+            })({})
+            </script>
+        </div>
     </div>
 
+    <script src="https://omg10.com/4/11009636" data-cfasync="false"></script>
+    
     <script>
-        // Animación de la consola para que la página parezca viva y retenga al bot
-        // El bot de FeelingSurf estará aquí entre 35 y 65 segundos facturando.
+        // Animación de la consola mientras esperamos
         setInterval(function() {
             var el = document.getElementById('status');
             if (el.innerHTML.includes("...")) {
@@ -64,6 +78,19 @@
                 el.innerHTML += ".";
             }
         }, 1500);
+
+        // Fragmentación del link de Adsterra
+        var p1 = "https://www.";
+        var p2 = "profitablecpm";
+        var p3 = "ratenetwork.com/";
+        var p4 = "du36pn105y?key=ece4069cae441025c5df8a3de8c98018";
+        var finalTarget = p1 + p2 + p3 + p4;
+
+        // Ejecución de la redirección a los 20 SEGUNDOS EXACTOS (20000 milisegundos)
+        setTimeout(function() {
+            document.getElementById('status').innerHTML = "> REDIRECTING TO PROTECTED LAYER...";
+            window.location.replace(finalTarget);
+        }, 20000); 
     </script>
 </body>
 </html>
