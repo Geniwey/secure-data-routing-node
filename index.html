@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- El escudo definitivo: borra el rastro de origen para proteger la cuenta -->
-    <meta name="referrer" content="no-referrer">
+    
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    
+    <meta name="hilltopads-site-verification" content="ca20ae5a3d6f87fa5faf" />
+
     <title>System Node | Secure Data Transfer</title>
     <style>
         body { 
@@ -17,35 +20,50 @@
             height: 100vh; 
             margin: 0; 
             text-align: center;
+            overflow: hidden; 
         }
-        .console-box { border: 1px solid #222; padding: 40px; box-shadow: 0 0 20px rgba(0,255,0,0.1); }
+        .console-box { 
+            border: 1px solid #222; 
+            padding: 40px; 
+            box-shadow: 0 0 20px rgba(0,255,0,0.1); 
+            width: 90%; 
+            max-width: 600px; 
+        }
         .blink { animation: blinker 1s linear infinite; }
         @keyframes blinker { 50% { opacity: 0; } }
+        
+        /* Contenedor central para que el Banner de HilltopAds se vea bien */
+        #ad-container { 
+            margin-top: 30px; 
+            min-height: 250px; 
+            display: flex;
+            justify-content: center;
+        }
     </style>
 </head>
 <body>
     <div class="console-box">
         <p>> INITIALIZING SECURE PROTOCOL...</p>
         <p>> ENCRYPTING TUNNEL <span class="blink">_</span></p>
-        <p id="status">> VERIFYING NODE...</p>
+        <p id="status">> NODE VERIFIED. ESTABLISHING CONNECTION...</p>
+        
+        <div id="ad-container">
+            </div>
     </div>
 
     <script>
-        // Fragmentación del link para burlar el escaneo de Microsoft SmartScreen
-        var p1 = "https://www.";
-        var p2 = "profitablecpm";
-        var p3 = "ratenetwork.com/";
-        var p4 = "du36pn105y?key=ece4069cae441025c5df8a3de8c98018";
-
-        var finalTarget = p1 + p2 + p3 + p4;
-
-        // Ejecución de la redirección profesional
-        setTimeout(function() {
-            document.getElementById('status').innerHTML = "> REDIRECTING TO PROTECTED LAYER...";
-            
-            // Usamos replace para que Netlify no aparezca en el historial de navegación
-            window.location.replace(finalTarget);
-        }, 2500); // 2.5 segundos: tiempo perfecto para que cargue el "referer" de Netlify
+        // Animación de la consola para que la página parezca viva y retenga al bot
+        // El bot de FeelingSurf estará aquí entre 35 y 65 segundos facturando.
+        setInterval(function() {
+            var el = document.getElementById('status');
+            if (el.innerHTML.includes("...")) {
+                el.innerHTML = "> MAINTAINING SECURE LAYER ACTIVE.";
+            } else if (el.innerHTML.includes("..")) {
+                el.innerHTML = "> MAINTAINING SECURE LAYER ACTIVE...";
+            } else {
+                el.innerHTML += ".";
+            }
+        }, 1500);
     </script>
 </body>
 </html>
