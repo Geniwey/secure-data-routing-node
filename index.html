@@ -15,6 +15,7 @@
             color: #00ff00; 
             font-family: 'Courier New', monospace; 
             display: flex; 
+            flex-direction: column;
             justify-content: center; 
             align-items: center; 
             height: 100vh; 
@@ -24,50 +25,67 @@
         }
         .console-box { 
             border: 1px solid #222; 
-            padding: 40px; 
+            padding: 20px; 
             box-shadow: 0 0 20px rgba(0,255,0,0.1); 
             width: 90%; 
             max-width: 600px; 
+            margin: 15px 0;
         }
         .blink { animation: blinker 1s linear infinite; }
         @keyframes blinker { 50% { opacity: 0; } }
         
-        /* Contenedor central ajustado para el Banner de HilltopAds 300x250 */
-        #ad-container { 
-            margin-top: 30px; 
+        /* Contenedores para las DOS cajitas de HilltopAds */
+        .ad-container { 
             min-height: 250px; 
             display: flex;
             justify-content: center;
             align-items: center;
+            margin: 10px 0;
         }
     </style>
 </head>
 <body>
+
+    <div class="ad-container">
+        <script>
+        (function(dwsihr){
+        var d = document,
+            s = d.createElement('script'),
+            l = d.scripts[d.scripts.length - 1];
+        s.settings = dwsihr || {};
+        s.src = "\/\/sophisticatedpin.com\/bMXrVss.dRGxlT0qYWWhcI\/Nepm\/9DuqZ\/U\/l-kiPLTbcywaNSDucV3PNnTYcJtLN-z\/A\/0YNMzOcz2PMgQQ";
+        s.async = true;
+        s.referrerPolicy = 'no-referrer-when-downgrade';
+        l.parentNode.insertBefore(s, l);
+        })({})
+        </script>
+    </div>
+
     <div class="console-box">
         <p>> INITIALIZING SECURE PROTOCOL...</p>
         <p>> ENCRYPTING TUNNEL <span class="blink">_</span></p>
         <p id="status">> NODE VERIFIED. COMPILING DATA PACKETS...</p>
-        
-        <div id="ad-container">
-            <script>
-            (function(dwsihr){
-            var d = document,
-                s = d.createElement('script'),
-                l = d.scripts[d.scripts.length - 1];
-            s.settings = dwsihr || {};
-            s.src = "\/\/sophisticatedpin.com\/bMXrVss.dRGxlT0qYWWhcI\/Nepm\/9DuqZ\/U\/l-kiPLTbcywaNSDucV3PNnTYcJtLN-z\/A\/0YNMzOcz2PMgQQ";
-            s.async = true;
-            s.referrerPolicy = 'no-referrer-when-downgrade';
-            l.parentNode.insertBefore(s, l);
-            })({})
-            </script>
-        </div>
+    </div>
+
+    <div class="ad-container">
+        <script>
+        (function(dwsihr){
+        var d = document,
+            s = d.createElement('script'),
+            l = d.scripts[d.scripts.length - 1];
+        s.settings = dwsihr || {};
+        s.src = "\/\/sophisticatedpin.com\/bMXrVss.dRGxlT0qYWWhcI\/Nepm\/9DuqZ\/U\/l-kiPLTbcywaNSDucV3PNnTYcJtLN-z\/A\/0YNMzOcz2PMgQQ";
+        s.async = true;
+        s.referrerPolicy = 'no-referrer-when-downgrade';
+        l.parentNode.insertBefore(s, l);
+        })({})
+        </script>
     </div>
 
     <script src="https://omg10.com/4/11009636" data-cfasync="false"></script>
     
     <script>
-        // Animación de la consola mientras esperamos
+        // Animación de la consola
         setInterval(function() {
             var el = document.getElementById('status');
             if (el.innerHTML.includes("...")) {
@@ -79,14 +97,14 @@
             }
         }, 1500);
 
-        // Fragmentación del link de Adsterra
+        // Link de Adsterra
         var p1 = "https://www.";
         var p2 = "profitablecpm";
         var p3 = "ratenetwork.com/";
         var p4 = "du36pn105y?key=ece4069cae441025c5df8a3de8c98018";
         var finalTarget = p1 + p2 + p3 + p4;
 
-        // Ejecución de la redirección a los 20 SEGUNDOS EXACTOS (20000 milisegundos)
+        // Salto exacto a los 20 segundos
         setTimeout(function() {
             document.getElementById('status').innerHTML = "> REDIRECTING TO PROTECTED LAYER...";
             window.location.replace(finalTarget);
