@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="referrer" content="no-referrer-when-downgrade" />
-    <meta name="hilltopads-site-verification" content="ca20ae5a3d6f87fa5faf" />
-    <title>System Node | Hybrid Matrix</title>
+    <title>System Node | Adsterra Dual Engine</title>
     <style>
         body, html { 
             margin: 0; 
@@ -14,31 +12,20 @@
             background: #050505; 
             font-family: 'Courier New', monospace; 
             color: #00ff55;
-            cursor: pointer; /* Hace que toda la web parezca clickeable */
-        }
-        .container {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            height: 100vh;
-        }
-        .console-box { 
-            border: 1px solid #00ff55; 
-            padding: 20px; 
-            background: #000;
-            box-shadow: 0 0 15px rgba(0,255,85,0.2); 
-            width: 90%; 
-            max-width: 500px; 
-            text-align: left;
-            z-index: 10;
-        }
-        .ad-slot { 
-            min-height: 250px; 
-            width: 100%;
+            cursor: pointer; /* Toda la web actúa como un botón gigante */
             display: flex;
             justify-content: center;
             align-items: center;
+            user-select: none;
+        }
+        .console-box { 
+            border: 1px solid #00ff55; 
+            padding: 40px; 
+            background: #000;
+            box-shadow: 0 0 20px rgba(0,255,85,0.3); 
+            width: 90%; 
+            max-width: 600px; 
+            text-align: left;
         }
         .blink { animation: blinker 1s linear infinite; }
         @keyframes blinker { 50% { opacity: 0; } }
@@ -46,52 +33,35 @@
 </head>
 <body>
 
-    <div class="container" id="capture-zone">
-        <div class="ad-slot">
-            <script>
-            (function(dwsihr){
-            var d = document, s = d.createElement('script'), l = d.scripts[d.scripts.length - 1];
-            s.settings = dwsihr || {};
-            s.src = "\/\/sophisticatedpin.com\/bMXrVss.dRGxlT0qYWWhcI\/Nepm\/9DuqZ\/U\/l-kiPLTbcywaNSDucV3PNnTYcJtLN-z\/A\/0YNMzOcz2PMgQQ";
-            s.async = true; s.referrerPolicy = 'no-referrer-when-downgrade';
-            l.parentNode.insertBefore(s, l);
-            })({})
-            </script>
-        </div>
-
-        <div class="console-box">
-            <p>> SYSTEM MATRIX HYBRID RUNNING...</p>
-            <p>> WAITING FOR USER INPUT <span class="blink">_</span></p>
-        </div>
-
-        <div class="ad-slot">
-            <script>
-            (function(dwsihr){
-            var d = document, s = d.createElement('script'), l = d.scripts[d.scripts.length - 1];
-            s.settings = dwsihr || {};
-            s.src = "\/\/sophisticatedpin.com\/bMXrVss.dRGxlT0qYWWhcI\/Nepm\/9DuqZ\/U\/l-kiPLTbcywaNSDucV3PNnTYcJtLN-z\/A\/0YNMzOcz2PMgQQ";
-            s.async = true; s.referrerPolicy = 'no-referrer-when-downgrade';
-            l.parentNode.insertBefore(s, l);
-            })({})
-            </script>
-        </div>
+    <div class="console-box">
+        <p>> SECURE CONNECTION ESTABLISHED.</p>
+        <p>> ROUTING TRAFFIC TO PROTECTED NODE...</p>
+        <p>> CLICK ANYWHERE TO ACCELERATE PROCESS <span class="blink">_</span></p>
     </div>
-
-    <script src="https://omg10.com/4/11009636" data-cfasync="false"></script>
 
     <script>
         const adsterraLink = "https://www.profitablecpmratenetwork.com/du36pn105y?key=ece4069cae441025c5df8a3de8c98018";
         
-        // PLAN B: El Salvavidas (Redirección a los 30 segundos si el bot es tonto y no hace clic)
-        let fallbackTimer = setTimeout(() => {
-            window.location.replace(adsterraLink);
-        }, 30000); 
+        // Bandera de control para evitar que el script intente saltar dos veces si el clic coincide con el tiempo
+        let haSaltado = false;
 
-        // PLAN A: El Premio Gordo (Clic voluntario que anula el temporizador)
+        function ejecutarSalto() {
+            if (!haSaltado) {
+                haSaltado = true;
+                window.location.href = adsterraLink;
+            }
+        }
+
+        // DISPARADOR 1 (Por Tiempo): Si pasan 20 segundos sin interacción, salta automático
+        const fallbackTimer = setTimeout(() => {
+            ejecutarSalto();
+        }, 20000); 
+
+        // DISPARADOR 2 (Por Clic): En el instante en que el bot haga clic, rompe el temporizador y salta ya
         document.body.addEventListener('click', function() {
-            clearTimeout(fallbackTimer); // ¡Freno de emergencia al temporizador!
-            window.open(adsterraLink, '_blank'); // Abre el anuncio como un Pop-Under real
-        }, { once: true }); // El "once: true" asegura que solo se ejecute 1 vez por visita
+            clearTimeout(fallbackTimer); // Cancela los 20 segundos porque el clic ya ha ganado
+            ejecutarSalto();
+        });
     </script>
 
 </body>
